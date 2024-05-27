@@ -61,7 +61,7 @@ function ReservationPage() {
           <div className='mr-3'>
             <button className='rounded-md bg-green-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'>
               <Link href='/reserva' target='_blank'>
-                Crear reserva
+              Book a Reservation
               </Link>
             </button>
           </div>
@@ -71,7 +71,7 @@ function ReservationPage() {
               onChange={(date: Date | null) => setSelectedDate(date)}
               dateFormat="yyyy-MM-dd"
               isClearable
-              placeholderText="Selecciona una fecha"
+              placeholderText="Pick a date"
               className='w-full text-gray-500 shadow-md sm:rounded-lg px-6 py-2 mb-4 bg-gray-50 outline-none transition-all placeholder:text-gray-500 focus:border-green-300 focus:ring-1 focus:ring-green-300'
             />
           </div>
@@ -81,13 +81,13 @@ function ReservationPage() {
           <table className="w-full text-sm text-left text-gray-500 ">
             <thead className='text-xs text-gray-700 uppercase bg-green-100'>
               <tr>
-                <th className="px-6 py-3">Fecha</th>
-                <th className="px-6 py-3">Hora</th>
-                <th className="px-6 py-3">Personas</th>
-                <th className="px-6 py-3">Nombre</th>
-                <th className="px-6 py-3">Apellido</th>
+                <th className="px-6 py-3">Date</th>
+                <th className="px-6 py-3">Time</th>
+                <th className="px-6 py-3">People</th>
+                <th className="px-6 py-3">First Name</th>
+                <th className="px-6 py-3">Last Name</th>
                 <th className="px-6 py-3">Email</th>
-                <th className="px-6 py-3">Teléfono</th>
+                <th className="px-6 py-3">Phone</th>
                 <th className="px-6 py-3"></th>
               </tr>
             </thead>

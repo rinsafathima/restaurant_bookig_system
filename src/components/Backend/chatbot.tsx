@@ -76,7 +76,7 @@ export default function ChatBot() {
                       alt="robot"
                     />
                     <span className="font-bold text-green-500">
-                      Bamboo Express
+                      Bug Free Spoon
                     </span>
                     <div className="flex items-center">
                       <span className="text-xs text-gray-500">Online</span>
@@ -88,7 +88,7 @@ export default function ChatBot() {
 
                 <div className="px-3 mt-3 overflow-y-scroll h-80 w-96">
                   <div className="bg-green-300 p-2 rounded-lg w-4/5 ml-auto mb-3">
-                    Hola, soy Bamboo Express, tu asistente virtual. ¿En qué puedo ayudarte?
+                    Hello, I'm Bug Free Spoon, your virtual assistant. How can I help you?
                   </div>
                   {conversation.map((item, index) => (
                     <div key={index}>
@@ -105,7 +105,7 @@ export default function ChatBot() {
                   ))}
                   {isTyping && (
                     <div className="bg-white p-2 rounded-lg w-4/5 mb-3">
-                      Escribiendo...
+                      Typing...
                     </div>
                   )}
                 </div>

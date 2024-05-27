@@ -14,7 +14,7 @@ export default function Navbar() {
           <div className="flex lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="block font-extrabold text-2xl	text-green-500">
-                Bamboo Express
+                Bug Free Spoon
               </span>
               {/* <Image
                 alt="logo"
@@ -37,45 +37,45 @@ export default function Navbar() {
                   : "text-gray-500 hover:text-gray-900 transition"
                   }  text-base`}
               >
-                Inicio
+                Home
               </span>
             </Link>
-            <Link href="/carta" passHref>
+            <Link href="/menu" passHref>
               <span
                 className={`${router.pathname === "/carta"
                   ? "text-green-500"
                   : "text-gray-500 hover:text-gray-900 transition "
                   } text-base`}
               >
-                Carta
+                Menu
               </span>
             </Link>
-            <Link href="/reserva" passHref>
+            <Link href="/reservation" passHref>
               <span
-                className={`${router.pathname === "/reserva"
+                className={`${router.pathname === "/reservation"
                   ? "text-green-500"
                   : "text-gray-500 hover:text-gray-900 transition"
                   }  text-base`}
               >
-                Reserva
+                Reservation
               </span>
             </Link>
-            <Link href="/contacto" passHref>
+            <Link href="/contact" passHref>
               <span
-                className={`${router.pathname === "/contacto"
+                className={`${router.pathname === "/contact"
                   ? "text-green-500"
                   : "text-gray-500 hover:text-gray-900 transition"
                   }  text-base`}
               >
-                Contacto
+                Contact
               </span>
             </Link>
           </nav>
 
           <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
-            <Link href="/reserva" passHref>
+            <Link href="/reservation" passHref>
               <span className="rounded-lg bg-green-500 transition hover:bg-green-600 px-5 py-2 text-sm font-medium text-white">
-                Reservar
+                Reservation
               </span>
             </Link>
           </div>
@@ -117,12 +117,12 @@ export default function Navbar() {
                             : "text-gray-500 hover:text-gray-900 transition "
                             } text-base`}
                         >
-                          Inicio
+                          Home
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/carta" passHref>
+                      <Link href="/menu" passHref>
                         <span
                           onClick={() => setMenuOpen(false)}
                           className={`${router.pathname === "/carta"
@@ -130,33 +130,33 @@ export default function Navbar() {
                             : "text-gray-500 hover:text-gray-900 transition"
                             }  text-base`}
                         >
-                          Carta
+                          Menu
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/reserva" passHref>
+                      <Link href="/reservation" passHref>
                         <span
                           onClick={() => setMenuOpen(false)}
-                          className={`${router.pathname === "/reserva"
+                          className={`${router.pathname === "/reservation"
                             ? "text-green-500"
                             : "text-gray-500 hover:text-gray-900 transition"
                             }  text-base`}
                         >
-                          Reserva
+                          Reservation
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/contacto" passHref>
+                      <Link href="/contact" passHref>
                         <span
                           onClick={() => setMenuOpen(false)}
-                          className={`${router.pathname === "/contacto"
+                          className={`${router.pathname === "/contact"
                             ? "text-green-500"
                             : "text-gray-500 hover:text-gray-900 transition "
                             } text-base`}
                         >
-                          Contacto
+                          Contact
                         </span>
                       </Link>
                     </li>

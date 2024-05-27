@@ -17,7 +17,7 @@ interface Category {
   slug: string;
 }
 
-function Carta() {
+function Menu() {
   const [foods, setFoods] = useState<Food[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [categoryId, setCategoryId] = useState<string>("");
@@ -115,4 +115,4 @@ function Carta() {
   );
 }
 
-export default Carta;
+export default Menu;

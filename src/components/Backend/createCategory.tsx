@@ -84,7 +84,7 @@ export default function CreateCategory({ onAddCategory }: CreateCategoryProps) {
 										as="h3"
 										className="text-lg font-medium leading-6 text-gray-900"
 									>
-										Agregar categoría
+										Add category
 									</Dialog.Title>
 									<div className="mt-4">
 										<form onSubmit={handleSubmit(onSubmit)}>
@@ -97,7 +97,7 @@ export default function CreateCategory({ onAddCategory }: CreateCategoryProps) {
 												id="name"
 												className="mt-1 block w-full rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-green-300"
 											/>
-											{errors.name && <p className="text-red-500 text-xs mt-1">El nombre es obligatorio</p>}
+											{errors.name && <p className="text-red-500 text-xs mt-1">Name is required</p>}
 
 											<label htmlFor="slug" className="block mt-4 text-sm font-medium text-gray-700">
 												Slug
@@ -108,14 +108,14 @@ export default function CreateCategory({ onAddCategory }: CreateCategoryProps) {
 												id="slug"
 												className="mt-1 block w-full rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-green-300"
 											/>
-											{errors.slug && <p className="text-red-500 text-xs mt-1">El slug es obligatorio</p>}
+											{errors.slug && <p className="text-red-500 text-xs mt-1">Slug is required</p>}
 
 											<div className="mt-4">
 												<button
 													type="submit"
 													className="inline-flex justify-center rounded-md border border-transparent bg-green-100 px-5 py-2.5 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
 												>
-													Crear
+													Create
 												</button>
 											</div>
 										</form>

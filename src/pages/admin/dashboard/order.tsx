@@ -102,7 +102,7 @@ function OrderPage() {
           <div className='mr-3'>
             <button className='rounded-md bg-green-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'>
               <Link href='/order' target='_blank'>
-                Crear pedido
+                Create Order
               </Link>
             </button>
           </div>
@@ -111,7 +111,7 @@ function OrderPage() {
               type="button"
               onClick={openModal}
               className='rounded-md bg-green-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'>
-              Mostrar QR
+                Print
             </button>
           </div>
           <Transition appear show={isOpen} as={Fragment}>
@@ -151,7 +151,7 @@ function OrderPage() {
                           type="button"
                           onClick={printQR}
                           className="mr-2 rounded-md bg-green-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-                          Imprimir
+                            Print
                         </button>
                       </div>
                     </Dialog.Panel>
@@ -164,10 +164,10 @@ function OrderPage() {
             <select
               className='block w-full rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-green-300'
               id="statusFilter" value={selectedStatus} onChange={handleStatusChange}>
-              <option value="">Estado</option>
-              <option value="pendiente">Pendiente</option>
-              <option value="procesando">Procesando</option>
-              <option value="completado">Completado</option>
+              <option value="">Status</option>
+              <option value="pendiente">Pending</option>
+              <option value="procesando">Processing</option>
+              <option value="completado">Completed</option>
             </select>
           </div>
         </div>
@@ -175,10 +175,10 @@ function OrderPage() {
           <table className="w-full text-sm text-left text-gray-500 ">
             <thead className='text-xs text-gray-700 uppercase bg-green-100'>
               <tr>
-                <th className="px-6 py-3">Artículos del pedido</th>
-                <th className="px-6 py-3">Fecha de creación</th>
-                <th className="px-6 py-3">Mesa</th>
-                <th className="px-6 py-3">Estado</th>
+                <th className="px-6 py-3">Order Items</th>
+                <th className="px-6 py-3">Creation Date</th>
+                <th className="px-6 py-3">Table</th>
+                <th className="px-6 py-3">Status</th>
                 <th className="px-6 py-3"></th>
               </tr>
             </thead>
@@ -189,7 +189,7 @@ function OrderPage() {
                     <ul>
                       {order.orderItems.map(item => (
                         <li key={item.id}>
-                          {item.food.name} - Cantidad: {item.quantity}
+                          {item.food.name} - Quantity: {item.quantity}
                         </li>
                       ))}
                     </ul>

@@ -1,7 +1,7 @@
 import Layout from "@/components/Frontend/layout"
 import ReservationForm from "@/components/Frontend/reservationForm"
 
-const Reserva: React.FC = () => {
+const Reservation: React.FC = () => {
   return (
     <Layout>
       <div className="mx-auto max-w-screen-xl">
@@ -12,4 +12,4 @@ const Reserva: React.FC = () => {
   )
 }
 
-export default Reserva
+export default Reservation

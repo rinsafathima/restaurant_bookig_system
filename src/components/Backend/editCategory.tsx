@@ -31,11 +31,11 @@ const EditCategory: React.FC<EditCategoryProps> = ({ id, name, slug, onUpdate })
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });
-      toast.success('Categoría actualizada correctamente');
+      toast.success('Category updated successfully');
       onUpdate();
       closeModal();
     } catch (error) {
-      toast.error('Error al actualizar la categoría');
+      toast.error('Error updating category');
     }
   };
 
@@ -77,11 +77,11 @@ const EditCategory: React.FC<EditCategoryProps> = ({ id, name, slug, onUpdate })
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    Editar categoría
+                    Edit category
                   </Dialog.Title>
                   <form onSubmit={handleSubmit} className="mt-4">
                     <label className="block mb-3">
-                      Nombre:
+                      Name:
                       <input
                         type="text"
                         value={updatedName}
@@ -103,14 +103,14 @@ const EditCategory: React.FC<EditCategoryProps> = ({ id, name, slug, onUpdate })
                         type="submit"
                         className="inline-flex justify-center rounded-md border border-transparent bg-green-100 px-5 py-2.5 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 mr-2"
                       >
-                        Guardar
+                        Save
                       </button>
                       <button
                         type="button"
                         className="inline-flex justify-center rounded-md border border-transparent bg-red-100 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                         onClick={closeModal}
                       >
-                        Cancelar
+                        Cancel
                       </button>
                     </div>
                   </form>

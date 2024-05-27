@@ -45,11 +45,11 @@ const EditFood: React.FC<EditFoodProps> = ({ id, name, price, categoryId, image,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       });
-      toast.success('Plato actualizada correctamente');
+      toast.success('Dish updated successfully');
       onUpdate();
       closeModal();
     } catch (error) {
-      toast.error('Error al actualizar la plato');
+      toast.error('Error updating dish');
     }
   };
 
@@ -60,7 +60,7 @@ const EditFood: React.FC<EditFoodProps> = ({ id, name, price, categoryId, image,
         const data = await response.data;
         setCategories(data);
       } catch (error) {
-        toast.error('Error al cargar las categorias');
+        toast.error('Error loading categories');
       }
     };
     getCategories();
@@ -105,11 +105,11 @@ const EditFood: React.FC<EditFoodProps> = ({ id, name, price, categoryId, image,
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    Editar plato
+                    Edit dish
                   </Dialog.Title>
                   <form onSubmit={handleSubmit} className="mt-4">
                     <label className="block mb-3">
-                      Nombre:
+                      Name:
                       <input
                         type="text"
                         value={updatedName}
@@ -118,7 +118,7 @@ const EditFood: React.FC<EditFoodProps> = ({ id, name, price, categoryId, image,
                       />
                     </label>
                     <label className="block mb-3">
-                      Precio:
+                      Price:
                       <input
                         type="number"
                         value={updateprice}
@@ -128,7 +128,7 @@ const EditFood: React.FC<EditFoodProps> = ({ id, name, price, categoryId, image,
                       />
                     </label>
                     <label className="block mb-3">
-                      Imagen:
+                      Image:
                       <input
                         type="text"
                         value={updatedImage}
@@ -138,7 +138,7 @@ const EditFood: React.FC<EditFoodProps> = ({ id, name, price, categoryId, image,
                     </label>
 
                     <label className="block mb-3">
-                      Categoría:
+                      Category:
                       <select
                         value={updatedCategoryId}
                         onChange={(e) => setUpdatedCategoryId(e.target.value)}
@@ -156,14 +156,14 @@ const EditFood: React.FC<EditFoodProps> = ({ id, name, price, categoryId, image,
                         type="submit"
                         className="inline-flex justify-center rounded-md border border-transparent bg-green-100 px-5 py-2.5 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 mr-2"
                       >
-                        Guardar
+                        Save
                       </button>
                       <button
                         type="button"
                         className="inline-flex justify-center rounded-md border border-transparent bg-red-100 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                         onClick={closeModal}
                       >
-                        Cancelar
+                        Cancel
                       </button>
                     </div>
                   </form>

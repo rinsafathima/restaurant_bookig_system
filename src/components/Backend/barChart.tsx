@@ -65,7 +65,7 @@ function BarChart() {
               enabled: true,
               callbacks: {
                 label: function (context) {
-                  return `Cantidad de pedido: ${context.parsed.y}`;
+                  return `Order Quantity: ${context.parsed.y}`;
                 },
               },
             },
@@ -79,7 +79,7 @@ function BarChart() {
   return (
     <>
       <div className="w-full md:col-span-2 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white">
-        <h1 className="text-center text-2xl font-bold text-green-500 mt-4 mb-6">Resumen de comandas</h1>
+        <h1 className="text-center text-2xl font-bold text-green-500 mt-4 mb-6">Order Summary</h1>
         <canvas id="myChart"></canvas>
       </div>
     </>

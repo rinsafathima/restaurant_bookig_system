@@ -27,7 +27,7 @@ function RecentOrders() {
 
   return (
     <div className='w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-y-scroll'>
-      <h1 className='text-xl text-center font-bold text-green-500'>Comandas recientes</h1>
+      <h1 className='text-xl text-center font-bold text-green-500'>Recent orders</h1>
       <ul>
         {orders.map((order) => (
           <li

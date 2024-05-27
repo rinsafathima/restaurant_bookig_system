@@ -80,10 +80,10 @@ function ReservationForm() {
 					</div>
 
 					<div className="flex flex-col">
-						<label htmlFor="time" className="mb-1 text font-medium text-gray-500">Hora:</label>
+						<label htmlFor="time" className="mb-1 text font-medium text-gray-500">Time:</label>
 						<select {...register('time')} id="time"
 							className="mb-2 bg-gray-100 border border-gray-300 text-gray-500 text rounded-lg focus:ring-green-500 focus:border-green-500 w-96 md:w-64 p-2.5" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)}>
-							<option value="">Seleccione</option>
+							<option value="">Select</option>
 							{getAvailableHours().map(hour => (
 								<option key={hour} value={`${hour}:00`}>
 									{`${hour}:00`}
@@ -91,10 +91,10 @@ function ReservationForm() {
 							))}
 						</select>
 
-						<label htmlFor="numPersons" className="mb-1 text font-medium text-gray-500">Número de personas:</label>
+						<label htmlFor="numPersons" className="mb-1 text font-medium text-gray-500">Number of People:</label>
 						<select {...register('numPersons')} id="numPersons"
 							className="mb-2 bg-gray-100 border border-gray-300 text-gray-500 text rounded-lg focus:ring-green-500 focus:border-green-500 w-96 md:w-64 p-2.5" value={selectedNumPersonas} onChange={(e) => setSelectedNumPersonas(e.target.value)}>
-							<option value="">Seleccione</option>
+							<option value="">Select</option>
 							{Array.from({ length: 10 }, (_, i) => i + 1).map(num => (
 								<option key={num} value={num}>
 									{num}
@@ -122,29 +122,29 @@ function ReservationForm() {
 				<form onSubmit={handleSubmit(onSubmit)} className='md:my-20 xl:mx-80 md:mx-36 sm:mx-20 mx-10'>
 					<div className="grid gap-6 mb-6 md:grid-cols-2">
 						<div>
-							<label htmlFor="name" className='block mb-2 font-medium text-gray-500'>Nombre:</label>
+							<label htmlFor="name" className='block mb-2 font-medium text-gray-500'>Your Name:</label>
 							<input  {...register('name', { required: true })} id="name" placeholder='Nombre' className='bg-gray-100 border text-gray-500 text rounded-lg block w-full p-2.5 focus:ring-green-500 focus:border-green-500' />
-							{errors.name && <p className='text-red-500 font-medium'>Este campo es obligatorio</p>}
+							{errors.name && <p className='text-red-500 font-medium'>This field is required</p>}
 						</div>
 
 						<div>
-							<label htmlFor="lastName" className='block mb-2 font-medium text-gray-500'>Apellido:</label>
+							<label htmlFor="lastName" className='block mb-2 font-medium text-gray-500'>Last Name:</label>
 							<input {...register('lastName', { required: true })} id="lastName" placeholder='Apellido' className='bg-gray-100 border text-gray-500 text rounded-lg block w-full p-2.5 focus:ring-green-500 focus:border-green-500' />
-							{errors.lastName && <p className='text-red-500 font-medium'>Este campo es obligatorio</p>}
+							{errors.lastName && <p className='text-red-500 font-medium'>This field is required</p>}
 						</div>
 					</div>
 
 					<div className="mb-6">
-						<label htmlFor="email" className='block mb-2 font-medium text-gray-500'>Email:</label>
+						<label htmlFor="email" className='block mb-2 font-medium text-gray-500'>Your Email:</label>
 						<input {...register('email', { required: true, pattern: /^\S+@\S+$/i })} placeholder='example@gmail.com' className='bg-gray-100 border text-gray-500 text rounded-lg block w-full p-2.5 focus:ring-green-500 focus:border-green-500' id="email" type="email" />
-						{errors.email && <p className='text-red-500 font-medium'>Por favor, introduce un email válido</p>}
+						{errors.email && <p className='text-red-500 font-medium'>Please enter a valid email address</p>}
 
 					</div>
 
 					<div className="mb-6">
-						<label htmlFor="phone" className='block mb-2 font-medium text-gray-500'>Teléfono:</label>
+						<label htmlFor="phone" className='block mb-2 font-medium text-gray-500'>Phone Number:</label>
 						<input {...register('phone', { required: true, pattern: /^[0-9]{9}$/ })} placeholder='Teléfono' className='bg-gray-100 border text-gray-500 text rounded-lg block w-full p-2.5 focus:ring-green-500 focus:border-green-500' id="phone" type="tel" />
-						{errors.phone && <p className='text-red-500 font-medium'>Por favor, introduce número de teléfono válido (9 dígitos)</p>}
+						{errors.phone && <p className='text-red-500 font-medium'>Please enter a valid 10-digit phone number</p>}
 					</div>
 
 					<button type="submit" className='rounded-lg bg-green-500 transition hover:bg-green-600 px-5 p-2.5 text font-medium text-white mr-2'>Reservar</button>

@@ -9,7 +9,7 @@ export default async function authMiddleware(
   const session = await getServerSession(req, res, authOptions);
 
   if (!session) {
-    res.status(401).json({ error: "No autorizado" });
+    res.status(401).json({ error: "No autorized" });
     return;
   }
 }

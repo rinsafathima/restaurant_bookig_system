@@ -19,13 +19,13 @@ export default function Footer() {
             <div className="flex justify-center text-green-600 lg:justify-start">
               <Link href="/">
                 <strong className="block font-extrabold text-2xl text-green-500">
-                  Bamboo Express
+                Bug Free Spoon
                 </strong>
               </Link>
             </div>
 
             <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-              Nuestras recetas únicas y de alta calidad te transportarán a un viaje culinario por China.
+            Our unique and high-quality recipes will transport you on a culinary journey through China.
             </p>
           </div>
 
@@ -36,34 +36,34 @@ export default function Footer() {
                   className="text-gray-700 transition hover:text-green-500"
                   href="/"
                 >
-                  Inicio
+                  Home
                 </Link>
               </li>
 
               <li>
                 <Link
                   className="text-gray-700 transition hover:text-green-500"
-                  href="/carta"
+                  href="/menu"
                 >
-                  Carta
+                  Menu
                 </Link>
               </li>
 
               <li>
                 <Link
                   className="text-gray-700 transition hover:text-green-500"
-                  href="/reserva"
+                  href="/reservation"
                 >
-                  Reserva
+                  Reservation
                 </Link>
               </li>
 
               <li>
                 <Link
                   className="text-gray-700 transition hover:text-green-500"
-                  href="/contacto"
+                  href="/contact"
                 >
-                  Contacto
+                  Contact
                 </Link>
               </li>
             </ul>

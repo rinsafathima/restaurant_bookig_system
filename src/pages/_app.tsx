@@ -12,8 +12,8 @@ export default function App({
   return (
     <SessionProvider session={session}>
       <Head>
-        <title>Bamboo Express</title>
-        <meta name="description" content="Bamboo Express" />
+        <title>Bug Free Spoon</title>
+        <meta name="description" content="Bug Free Spoon" />
         <link rel="icon" href="/ico/ico.png" />
       </Head>
       <Component {...pageProps} />

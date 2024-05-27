@@ -2,7 +2,7 @@ import Layout from '../components/Frontend/layout'
 import ContactForm from '@/components/Frontend/contactForm'
 import Link from 'next/link'
 
-const Contacto: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <Layout>
       <div className="mx-auto max-w-screen-xl">
@@ -10,7 +10,7 @@ const Contacto: React.FC = () => {
           <div className="lg:flex lg:items-center lg:-mx-6">
             <div className="lg:w-1/2 lg:mx-6 m-16">
               <h1 className="text-2xl font-semibold text-gray-800  lg:text-3xl">
-                Contacta con nosotros
+                Let's Talk Delicious! 
               </h1>
 
               <div className="mt-6 space-y-8 md:mt-8 ">
@@ -21,7 +21,7 @@ const Contacto: React.FC = () => {
                   </svg>
 
                   <span className="mx-2 text-gray-700 w-72 ">
-                    C. Poeta Rafael Alberti, 8, 11500 El Puerto de Sta María, Cádiz
+                    Ramakrishna Road, Colombo 6
                   </span>
                 </p>
 
@@ -38,12 +38,12 @@ const Contacto: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
 
-                  <span className="mx-2 text-gray-700 truncate w-72 ">info@bambuexpress.com</span>
+                  <span className="mx-2 text-gray-700 truncate w-72 ">info@bugfreeapoon.com</span>
                 </p>
               </div>
 
               <div className="mt-6 w-80 md:mt-8">
-                <h3 className="text-gray-600 ">Síganos en</h3>
+                <h3 className="text-gray-600 ">Stay Connected</h3>
                 <div className="flex mt-4 -ml-3">
                   <Link
                     className="mx-1.5 text-gray-400 transition-colors duration-300 transform hover:text-green-500"
@@ -81,4 +81,4 @@ const Contacto: React.FC = () => {
   )
 }
 
-export default Contacto
+export default Contact

@@ -20,7 +20,7 @@ function CategoryPage() {
       const data = await response.data;
       setCategories(data);
     } catch (error) {
-      toast.error('Error al cargar las categorias');
+      toast.error('Error loading categories');
     }
   };
 
@@ -35,11 +35,11 @@ function CategoryPage() {
       });
       if (response.ok) {
         setCategories(categories.filter((category) => category.id !== id));
-        toast.success('Categoría eliminada correctamente');
+        toast.success('Category deleted successfully');
       }
     }
     catch (error) {
-      toast.error(`Error al eliminar la categoría`);
+      toast.error(`Error deleting category`);
     }
   };
 
@@ -58,7 +58,7 @@ function CategoryPage() {
           <table className="w-full text-sm text-left text-gray-500 ">
             <thead className="text-xs text-gray-700 uppercase bg-green-100">
               <tr>
-                <th className="px-6 py-3">Nombre</th>
+                <th className="px-6 py-3">Name</th>
                 <th className="px-6 py-3">Slug</th>
                 <th className="px-6 py-3"></th>
               </tr>

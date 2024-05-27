@@ -59,9 +59,9 @@ function FoodPage() {
           <table className="w-full text-sm text-left text-gray-500 ">
             <thead className="text-xs text-gray-700 uppercase bg-green-100">
               <tr>
-                <th className="px-6 py-3">Nombre</th>
-                <th className="px-6 py-3">Precio</th>
-                <th className="px-6 py-3">Categoría</th>
+                <th className="px-6 py-3">Name</th>
+                <th className="px-6 py-3">Price</th>
+                <th className="px-6 py-3">Category</th>
                 <th className="px-6 py-3"></th>
               </tr>
             </thead>

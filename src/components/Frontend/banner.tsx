@@ -21,7 +21,7 @@ export default function Banner() {
             <Link
               href="/reserva"
               className="block w-full rounded bg-green-500 px-12 py-3 text-sm font-medium text-white shadow hover:bg-green-600 focus:outline-none focus:ring active:bg-green-500 sm:w-auto">
-              Reservar
+              Reservation
             </Link>
           </div>
         </div>

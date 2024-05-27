@@ -52,7 +52,7 @@ export default function Navbar() {
 											<path d="M818.4 981.6H205.6c-12.8 0-24.8-2.4-36.8-7.2-11.2-4.8-21.6-11.2-29.6-20-8.8-8.8-15.2-18.4-20-29.6-4.8-12-7.2-24-7.2-36.8V250.4c0-12.8 2.4-24.8 7.2-36.8 4.8-11.2 11.2-21.6 20-29.6 8.8-8.8 18.4-15.2 29.6-20 12-4.8 24-7.2 36.8-7.2h92.8v47.2H205.6c-25.6 0-47.2 20.8-47.2 47.2v637.6c0 25.6 20.8 47.2 47.2 47.2h612c25.6 0 47.2-20.8 47.2-47.2V250.4c0-25.6-20.8-47.2-47.2-47.2H725.6v-47.2h92.8c12.8 0 24.8 2.4 36.8 7.2 11.2 4.8 21.6 11.2 29.6 20 8.8 8.8 15.2 18.4 20 29.6 4.8 12 7.2 24 7.2 36.8v637.6c0 12.8-2.4 24.8-7.2 36.8-4.8 11.2-11.2 21.6-20 29.6-8.8 8.8-18.4 15.2-29.6 20-12 5.6-24 8-36.8 8z" />
 											<path d="M747.2 297.6H276.8V144c0-32.8 26.4-59.2 59.2-59.2h60.8c21.6-43.2 66.4-71.2 116-71.2 49.6 0 94.4 28 116 71.2h60.8c32.8 0 59.2 26.4 59.2 59.2l-1.6 153.6z m-423.2-47.2h376.8V144c0-6.4-5.6-12-12-12H595.2l-5.6-16c-11.2-32.8-42.4-55.2-77.6-55.2-35.2 0-66.4 22.4-77.6 55.2l-5.6 16H335.2c-6.4 0-12 5.6-12 12v106.4z" />
 										</svg>
-										<span className="group-hover:text-gray-700">Comandas</span>
+										<span className="group-hover:text-gray-700">Orders</span>
 									</Link>
 								</li>
 								<li>
@@ -65,7 +65,7 @@ export default function Navbar() {
 											<path className="fill-current text-gray-600 group-hover:text-green-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
 											<path className="fill-current text-gray-300 group-hover:text-green-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
 										</svg>
-										<span className="group-hover:text-gray-700">Reservas</span>
+										<span className="group-hover:text-gray-700">Reservation</span>
 									</Link>
 								</li>
 								<li>
@@ -78,7 +78,7 @@ export default function Navbar() {
 											<path className="fill-current text-gray-300 group-hover:text-green-300" fillRule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clipRule="evenodd" />
 											<path className="fill-current text-gray-600 group-hover:text-green-600" d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
 										</svg>
-										<span className="group-hover:text-gray-700">Categorías</span>
+										<span className="group-hover:text-gray-700">Category</span>
 									</Link>
 								</li>
 								<li>
@@ -94,7 +94,7 @@ export default function Navbar() {
 												<path d="M434.051,862.811h3.008a2.394,2.394,0,0,0,0-4.788h-3.008a2.394,2.394,0,0,0,0,4.788Zm-1.487-2.816a.771.771,0,1,1,1.541,0v1.152a.771.771,0,1,1-1.541,0Z" />
 											</g>
 										</svg>
-										<span className="group-hover:text-gray-700">Platos</span>
+										<span className="group-hover:text-gray-700">Dishes</span>
 									</Link>
 								</li>
 							</ul>
@@ -105,7 +105,7 @@ export default function Navbar() {
 								<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
 								</svg>
-								<span className="group-hover:text-gray-700">Cerrar sesión</span>
+								<span className="group-hover:text-gray-700">Log out</span>
 							</button>
 						</div>
 					</div>

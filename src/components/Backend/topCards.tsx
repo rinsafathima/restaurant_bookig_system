@@ -28,21 +28,21 @@ function TopCards() {
 			<div className='lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-3 rounded-lg'>
 				<div className='flex flex-col w-full'>
 					<p className='text-2xl font-bold'>{data.reservationsCount}</p>
-					<p className='text-gray-600'>Reservas</p>
+					<p className='text-gray-600'>Reservation</p>
 				</div>
 
 			</div>
 			<div className='lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-3 rounded-lg'>
 				<div className='flex flex-col w-full'>
 					<p className='text-2xl font-bold'>{data.ordersCount}</p>
-					<p className='text-gray-600'>Comandas</p>
+					<p className='text-gray-600'>Orders</p>
 				</div>
 
 			</div>
 			<div className='lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-3 rounded-lg'>
 				<div className='flex flex-col w-full'>
 					<p className='text-2xl font-bold'>{data.foodCount}</p>
-					<p className='text-gray-600'>Platos</p>
+					<p className='text-gray-600'>Dishes</p>
 				</div>
 			</div>
 		</div>

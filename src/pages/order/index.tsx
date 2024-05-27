@@ -71,15 +71,15 @@ function Order() {
         closeModal();
         setCartItems([]);
         setTable("");
-        toast.success('Pedido finalizado', {
+        toast.success('Order completed', {
           duration: Infinity,
         });
 
       } else {
-        toast.error('Error al finalizar el pedido');
+        toast.error('Error completing order');
       }
     } catch (error) {
-      toast.error('Error al finalizar el pedido');
+      toast.error('Error completing order');
     }
   };
 
@@ -187,8 +187,8 @@ function Order() {
                         <table className="w-full text-sm text-left text-gray-500 my-3 ">
                           <thead className="text-xs text-gray-700 uppercase bg-green-100">
                             <tr>
-                              <th className="px-6 py-3">Nombre</th>
-                              <th className="px-6 py-3">Cantidad</th>
+                              <th className="px-6 py-3">Name</th>
+                              <th className="px-6 py-3">Quantity</th>
                               <th className="px-6 py-3"></th>
                             </tr>
                           </thead>
@@ -231,7 +231,7 @@ function Order() {
                         </table>
                         <div className='mt-6 text-right'>
                           <p className='text-red-500'>
-                            {cartItems.length === 0 && 'No hay platos en el carrito'}
+                            {cartItems.length === 0 && 'There are no items in your cart'}
                           </p>
 
                           <p className='font-semibold text-green-500'>
@@ -249,7 +249,7 @@ function Order() {
           <div>
             <button className="inline-flex justify-center rounded-md border border-transparent bg-green-100 px-5 py-2.5 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
               onClick={openModal}>
-              Finalizar pedido
+                Place Order
             </button>
             <Transition appear show={isOpen} as={Fragment}>
               <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -282,17 +282,17 @@ function Order() {
                           as="h3"
                           className="text-lg font-medium leading-6 text-gray-900"
                         >
-                          Finalizar pedido
+                          Place Order
                         </Dialog.Title>
 
                         <div className='my-3'>
                           <select id="table"
                             className="mt-1 block w-full rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-green-300"
                             value={table} onChange={(e) => setTable(e.target.value)}>
-                            <option value="">Seleccionar la mesa:</option>
+                            <option value="">Select table:</option>
                             {
                               Array.from({ length: 20 }, (_, i) => (
-                                <option key={i + 1} value={i + 1}>Mesa {i + 1}</option>
+                                <option key={i + 1} value={i + 1}>Table {i + 1}</option>
                               ))
                             }
                           </select>
@@ -300,10 +300,10 @@ function Order() {
 
                         <div className='my-3'>
                           <p className='text-red-500'>
-                            {cartItems.length === 0 && 'No hay platos en el carrito'}
+                            {cartItems.length === 0 && 'There are no items in your cart'}
                           </p>
                           <p className='text-red-500'>
-                            {!table && 'Por favor, selecciona una mesa para finalizar el pedido'}
+                            {!table && 'Please select a table to complete your order'}
                           </p>
                         </div>
 
@@ -318,7 +318,7 @@ function Order() {
                               className="inline-flex justify-center rounded-md border border-transparent bg-green-100 px-5 py-2.5 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
                               onClick={finalizeOrder}
                               disabled={cartItems.length === 0 || !table}>
-                              Finalizar pedido
+                              Place Order
                             </button>
                           </div>
                         </div>
