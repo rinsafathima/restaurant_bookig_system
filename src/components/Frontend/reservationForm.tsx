@@ -26,7 +26,7 @@ function ReservationForm() {
 	const onSubmit: SubmitHandler<FormValues> = async data => {
 		try {
 			await axios.post('/api/reservation/post', data);
-			toast.success(`Reserva creada para el ${date?.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} a las ${selectedTime} para ${selectedNumPersonas} personas`, {
+			toast.success(`Reservation created for the ${date?.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} at ${selectedTime} for ${selectedNumPersonas} people`, {
 				duration: Infinity,
 			});
 			reset();
@@ -38,14 +38,14 @@ function ReservationForm() {
 
 		} catch (error) {
 
-			toast.error('Error al crear la reserva');
+			toast.error('Error when creating the reservation');
 		}
 	};
 
 	const handleDateChange = (value: Date | Date[]) => {
 		if (value instanceof Date) {
 			setDate(value);
-			setValue('date', value.toLocaleDateString('en-CA', { timeZone: 'Europe/Madrid' }) as any);
+			setValue('date', value.toLocaleDateString('en-CA', { timeZone: 'America/New_York' }) as any);
 		}
 	};
 
@@ -74,7 +74,7 @@ function ReservationForm() {
 						<Calendar
 							onChange={handleDateChange as any}
 							value={date}
-							locale="es-ES"
+							locale="en-US"
 							minDate={new Date()}
 						/>
 					</div>
@@ -111,7 +111,7 @@ function ReservationForm() {
 									: "bg-green-500 text-white"
 									}`}
 								disabled={!date || !selectedTime || !selectedNumPersonas}>
-								Continuar
+								Continue
 							</button>
 						)}
 					</div>
@@ -147,9 +147,9 @@ function ReservationForm() {
 						{errors.phone && <p className='text-red-500 font-medium'>Please enter a valid 10-digit phone number</p>}
 					</div>
 
-					<button type="submit" className='rounded-lg bg-green-500 transition hover:bg-green-600 px-5 p-2.5 text font-medium text-white mr-2'>Reservar</button>
+					<button type="submit" className='rounded-lg bg-green-500 transition hover:bg-green-600 px-5 p-2.5 text font-medium text-white mr-2'>To reserve</button>
 
-					<button type="button" className='rounded-lg bg-red-500 transition hover:bg-red-600 px-5 p-2.5 text font-medium text-white' onClick={handleBack}>Volver</button>
+					<button type="button" className='rounded-lg bg-red-500 transition hover:bg-red-600 px-5 p-2.5 text font-medium text-white' onClick={handleBack}>To return</button>
 				</form>
 			)}
 		</div>
